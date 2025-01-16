@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h6> This page is dedicated to customers(More formally Employees For now)</h6>
+    <br>
+    <hr>
+    <h4> Add product</h4>
+    <br>
+    <button onclick="window.location.href='/productAdd'">Add product</button>
+    <hr>
+<br>
+    <br>
+    <p>
+        User: <span sec:authentication="principal.username"></span>
+        <br><br>
+        Role(s) : <span sec:authentication="principal.authorities"></span>
+    </p>
+    <form action="#" th:action="@{/logout}" method="POST">
+        <input type="submit" value="logout">
+    </form>
+
+</body>
+</html>
