@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <form action="#" th:action="@{/register-form-submission}" th:object="${employee}" method="POST">
+            <input type="text" th:field="*{firstName}" placeholder="Enter First Name : ">
+            <br>
+            <input type="text" th:field="*{lastName}" placeholder="Enter Last name : ">
+            <br>
+            <input type="text" th:field="*{email}" placeholder="email : ">
+            <br>
+            <input type="text" th:field="*{password}" placeholder="password : ">
+            <br>
+            <input type="text" th:field="*{userName}" placeholder="UserName">
+            <button type="submit">Submit</button>
+
+            <br><br>
+            <h4>Are you a seller ?</h4>
+            <br>
+            <a th:href="@{/Seller}">Click here</a>
+        </form>
+    </div>
+</body>
+</html>
